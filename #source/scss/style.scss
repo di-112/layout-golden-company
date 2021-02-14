@@ -1,0 +1,306 @@
+@import "nule.scss";
+@import "mixins.scss";
+
+html,body{
+	height: 100%;
+}
+
+.wrapper {
+	height: 100%;
+}
+
+.header {
+
+	height: 100vh;
+	padding: 0 20px;
+	min-height: 800px; 
+	background: url(img/first.jpg) center / cover;
+}
+
+.container {
+	max-width: 941px;
+	margin: 0 auto;
+	padding: 0 10px;
+	text-align: center;
+	position: relative;
+}
+
+.header__menu {
+	display: flex;
+	padding: 0 20px;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 0 30.3%;
+	position: relative;
+	left: 0;
+	top: 44px;
+}
+
+.header__logo{
+	position: relative;
+	z-index: 5;
+}
+
+.menu__list {
+	display: flex;
+	overflow: auto;
+}
+
+.list__item {
+	margin: 0 21px;
+}
+
+.list__item a{
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 41px;
+	text-transform: uppercase;
+}
+
+.list__item:fist-child {
+	margin-left: 0;
+}
+
+.list__item:last-child {
+	margin-right: 0;
+}
+
+@import "burger.scss";
+
+.header__title1 {
+	color: #ffffff;
+	@include adaptiv-font(40, 25);
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	margin-bottom: 7.3%;
+	@media (max-width: 700px) {
+		display: inline-block;
+		margin-top: 50%;
+	}	
+	@media (max-width: 320px) {
+		display: inline-block;
+		margin-top: 70%;
+	}	
+}
+
+.header__title2 {
+
+	color: #ffffff;
+	@include adaptiv-font(75, 35);
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: -1.88px;
+	margin-bottom: 15%;
+
+}
+
+.header__btn {
+
+	padding: 25px 52px;
+	background: #fed136;
+	color: #484543;
+	@include adaptiv-font(18, 14);
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.header__btn:hover {
+	box-shadow: 0 0 30px rgba(255,255,255,0.5);
+	transition: all 0.5s ease 0s;  
+}
+
+.title {
+	color: #222222;
+	@include adaptiv-font(40, 25);
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+}
+
+.subtitle {
+	color: #777777;
+	@include adaptiv-font(16, 12);
+	font-weight: 400;
+}
+
+.services__title {
+	margin-bottom: 10px;
+}
+
+.services__subtitle {
+	margin-bottom: 77px;
+}
+
+
+.services {
+	padding: 118px 0;
+	text-align: center;
+}
+
+@media (min-width: 1020px) {
+
+	.services__flex {
+	display: flex;
+	margin: 0 -41px;
+	}
+
+	.services__item {
+		margin-bottom: 0;
+		padding: 0 41px;
+	}
+
+}
+
+.services__item {
+	display: flex;
+	flex-direction: column;
+ 	margin-bottom: 20px;
+}
+
+.item__img {
+	margin-bottom: 24px;
+}
+.item__title {
+	margin-bottom: 18px;
+	color: #222222;
+	@include adaptiv-font(18, 15);
+	font-weight: bold;
+	letter-spacing: -0.45px;
+}
+.item__text {
+	color: #777777;
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: -0.35px;
+}
+
+.portfolio {
+	background: #f7f7f7;
+	padding: 119px 0 134px;
+}
+
+.portfolio__title {
+	margin-bottom: 20px;
+}
+.portfolio__subtitle {
+	margin-bottom: 75px;
+}
+
+
+.portfolio__img {
+	margin-bottom: 20px;
+}
+
+
+@media (min-width: 1050px){
+	.portfolio__flex {
+		display: flex;
+		justify-content: center;
+		margin: 0 -17px;
+	}
+	.portfolio__img {
+		margin-bottom: 0;
+		padding: 0 17px;
+	}
+}
+
+.about {
+	padding: 127px 0 5px;
+}
+
+.about__title {
+	margin-bottom: 20px;
+}
+.about__subtitle {
+	margin-bottom: 77px;
+}
+
+
+.grid__item{
+	margin-bottom: 50px;
+}
+
+
+@media (min-width: 700px) {
+	.about__grid {
+		display: grid;
+		grid-template-columns: 1fr 183px 1fr;
+		grid-template-rows: repeat(4,1fr);
+		row-gap: 93px;
+		column-gap: 38px;
+	}
+
+	.grid__text {
+		text-align: right;
+		
+	}
+
+	.grid__text:nth-child(even) {
+		text-align: left;
+		
+	}
+
+	.grid__img {
+		grid-column-start: 2;
+	   grid-column-end: 4;
+	   text-align: left;
+	 
+	}
+
+	.grid__img:nth-child(odd){
+		grid-column-start: 1;
+	   grid-column-end: 3;
+	   text-align: right;
+	}
+
+	.grid__item{
+	margin-bottom: 0px;
+	}
+}
+
+
+.grid__title, .grid__subtitle {
+	color: #222222;
+	@include adaptiv-font(18, 15);
+	font-weight: 700;
+	letter-spacing: -0.45px;
+	letter-spacing: -0.45px;
+}
+
+.grid__title{
+	text-transform: uppercase;
+}
+
+.grid__subtitle {
+	margin-bottom: 18px;
+}
+
+.grid__p {
+	color: #777777;
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: -0.35px;
+	}
+
+.footer span{
+	display: inline-block;
+	color: #555555;
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: -0.35px;
+}
+
+.footer {
+	display: flex;
+	padding: 6.2% 0;
+	justify-content: center;
+	align-items: center;
+}
+
+@media (max-width: 500px){
+	.services, .about, .portfolio {
+		padding: 50px 0;
+	}
+}
