@@ -75,6 +75,7 @@
 	 .menu__list{
 	 	transition: all 0.5 ease 0s;
 		padding: 120px 0;
+		overflow: auto;
 	 	position: fixed;
 	 	top:-100%;
 	 	left: 0;
