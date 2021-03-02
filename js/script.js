@@ -28,5 +28,10 @@ $(document).ready(function() {
 			$(".services__item").addClass('animation');
 		}
 	});
+	$(window).scroll(function(){
+		if ( $(this).scrollTop() > $(".map").offset().top - 400 ) {
+			$(".map__map").addClass('animation');
+		}
+	});
 	
 });

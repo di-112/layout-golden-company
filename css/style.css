@@ -104,6 +104,8 @@ html, body {
 
 .menu__content {
   max-width: 1050px;
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -236,6 +238,7 @@ html, body {
   .menu__list {
     transition: all 0.5 ease 0s;
     padding: 120px 0;
+    text-align: center;
     overflow: auto;
     position: fixed;
     top: -100%;
@@ -432,7 +435,7 @@ html, body {
   }
 }
 .about {
-  padding: 127px 0 5px;
+  padding: 120px 0;
 }
 
 .about.animation .grid__item {
@@ -453,7 +456,7 @@ html, body {
 }
 
 .grid__item {
-  margin-bottom: 50px;
+  padding: 20px 0;
 }
 
 @media (min-width: 700px) {
@@ -485,7 +488,6 @@ html, body {
   }
 
   .grid__item {
-    margin-bottom: 0px;
     position: relative;
     opacity: 0;
   }
@@ -527,6 +529,40 @@ html, body {
   font-size: 14px;
   font-weight: 400;
   letter-spacing: -0.35px;
+}
+
+.map {
+  padding: 50px 0;
+  text-align: center;
+  background: #f7f7f7;
+}
+.map .map__title {
+  margin-bottom: 40px;
+}
+.map .map__map {
+  visibility: hidden;
+}
+@media (max-width: 670px) {
+  .map .map__map {
+    width: 500px;
+    height: 300px;
+  }
+}
+@media (max-width: 520px) {
+  .map .map__map {
+    width: 400px;
+    height: 250px;
+  }
+}
+@media (max-width: 420px) {
+  .map .map__map {
+    width: 300px;
+    height: 250px;
+  }
+}
+.map .map__map.animation {
+  visibility: visible;
+  transition: all 2s ease;
 }
 
 .footer span {
